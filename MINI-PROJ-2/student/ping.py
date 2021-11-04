@@ -69,5 +69,7 @@ while True:
     # print out the received message
     print(f"received message: {message['text']}")
     ###### YOUR CODE HERE ######
-
+    endTime = time.time()
+    messageTimeTaken = endTime - message["time"]
+    print(f"response message time taken: {messageTimeTaken} seconds")
 

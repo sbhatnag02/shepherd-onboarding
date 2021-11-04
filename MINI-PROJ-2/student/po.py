@@ -15,10 +15,14 @@ events = queue.Queue()
 # and when messages are received, to put them in events.
 ydl_start_read("PO", events)
 # an infinite while loop. This program only ends when the user presses ctrl+c.
-while True:
+
+num_received = 0
+received_cutoff = 5
+while num_received < received_cutoff:
     # block=True means that the program will wait here until something appears
     # the queue. Reading from the queue removes the read data from the queue, 
     # leaving the queue empty again.
     # rcvd will be a (header, dictionary) tuple.
     rcvd = events.get(block=True)
     print(f"RECEIVED: {rcvd}")
+    num_received += 1

@@ -11,4 +11,4 @@ from ydl import ydl_send, ydl_start_read
 # error prone (what if we mistype the header? it'll be sent just fine, but 
 # then the receiving end might crash). That's why in the next section,
 # we'll introduce an alternative syntax for creating messages to send. 
-ydl_send("PO", "CHEESE", {"info": "I like cheese"})
+ydl_send("PO", "BLUEBERRY", {"info": "Goats eat blueberries"})
